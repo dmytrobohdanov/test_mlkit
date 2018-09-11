@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "723726892584",
+    "firebase_url": "https://devicestextrecognitionproto.firebaseio.com",
+    "project_id": "devicestextrecognitionproto",
+    "storage_bucket": "devicestextrecognitionproto.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723726892584:android:e73dea79410a79ed",
+        "android_client_info": {
+          "package_name": "com.dbohdanov.devicestextrecognitionproto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "723726892584-6d93o5gckkk5d3p135j90uia722fniks.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dbohdanov.devicestextrecognitionproto",
+            "certificate_hash": "9bab85aa1ecc0a19f1f839308b20523502e25dd1"
+          }
+        },
+        {
+          "client_id": "723726892584-e9k72cp2fjlf0h3gtmjvrfha5jtj6oqp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAA6XmCBMwL1gWyQR_tXythw2lki-XJFuY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "723726892584-e9k72cp2fjlf0h3gtmjvrfha5jtj6oqp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
