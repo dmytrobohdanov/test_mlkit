@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
             var bitmap = BitmapFactory.decodeFile(contentUri.path)
 
             //blur
-            bitmap = GaussianBlur.with(this).radius(10).render(bitmap)
+            bitmap = GaussianBlur.with(this).radius(5).render(bitmap)
 
 //            TextRecognizer(this).getTextFromBitmap(bitmap, findViewById<TextView>(R.id.textview))
             TextRecognizer(this).getByUriToBitmap(contentUri, bitmap, findViewById(R.id.textview))
