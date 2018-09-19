@@ -2,23 +2,21 @@ package com.dbohdanov.devicestextrecognitionproto
 
 import android.app.Activity
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.provider.MediaStore
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
+import android.os.Bundle
 import android.os.Environment
+import android.provider.MediaStore
+import android.support.v4.content.FileProvider
+import android.support.v7.app.AppCompatActivity
 import android.widget.Button
 import android.widget.ImageView
-import androidx.core.content.FileProvider
 import com.squareup.picasso.Picasso
+import com.vansuita.gaussianblur.GaussianBlur
 import java.io.File
 import java.io.IOException
-import android.content.res.AssetManager
-import android.media.ExifInterface
-import android.widget.TextView
 import java.io.InputStream
 
 
@@ -65,11 +63,16 @@ class MainActivity : AppCompatActivity() {
 
             val f = File(currentPhotoPath)
             val contentUri: Uri = Uri.fromFile(f)
-            val bitmap = BitmapFactory.decodeFile(contentUri.path)
+            var bitmap = BitmapFactory.decodeFile(contentUri.path)
+
+            //blur
+            bitmap = GaussianBlur.with(this).radius(10).render(bitmap)
+
 //            TextRecognizer(this).getTextFromBitmap(bitmap, findViewById<TextView>(R.id.textview))
             TextRecognizer(this).getByUriToBitmap(contentUri, bitmap, findViewById(R.id.textview))
 //            TextRecognizer(this).getTextFromImageByUri(contentUri, findViewById(R.id.textview))
 //            Picasso.get().load(f).into(findViewById<ImageView>(R.id.image_view))
+            findViewById<ImageView>(R.id.image_view).setImageBitmap(bitmap)
         }
     }
 
